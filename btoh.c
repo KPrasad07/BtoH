@@ -2,15 +2,15 @@
  
 int main()
 {
-  int m, n, p, q, c, d, k;
+  int m, n, p, q;
   int first[10][10], second[10][10];
  
   printf("Enter number of rows and columns of first matrix\n");
   scanf("%d%d", &m, &n);
   printf("Enter elements of first matrix\n");
  
-  for (c = 0; c < m; c++)
-    for (d = 0; d < n; d++)
+  for (int c = 0; c < m; c++)
+    for (int d = 0; d < n; d++)
       scanf("%d", &first[c][d]);
  
   printf("Enter number of rows and columns of second matrix\n");
@@ -22,15 +22,15 @@ int main()
   {
     printf("Enter elements of second matrix\n");
  
-    for (c = 0; c < p; c++)
-      for (d = 0; d < q; d++)
+    for (int c = 0; c < p; c++)
+      for (int d = 0; d < q; d++)
         scanf("%d", &second[c][d]);
  
-    for (c = 0; c < m; c++) {
+    for (int c = 0; c < m; c++) {
      static int sum = 0;
      Static int multiply[10][10];
-      for (d = 0; d < q; d++) {
-        for (k = 0; k < p; k++) {
+      for (int d = 0; d < q; d++) {
+        for (int k = 0; k < p; k++) {
           sum = sum + first[c][k]*second[k][d];
         }
  
@@ -41,8 +41,8 @@ int main()
  
     printf("Product of the matrices:\n");
  
-    for (c = 0; c < m; c++) {
-      for (d = 0; d < q; d++)
+    for (int c = 0; c < m; c++) {
+      for (int d = 0; d < q; d++)
         printf("%d\t", multiply[c][d]);
  
       printf("\n");

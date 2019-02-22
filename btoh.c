@@ -2,8 +2,8 @@
  
 int main()
 {
-  int m, n, p, q, c, d, k, sum = 0;
-  int first[10][10], second[10][10], multiply[10][10];
+  int m, n, p, q, c, d, k;
+  int first[10][10], second[10][10];
  
   printf("Enter number of rows and columns of first matrix\n");
   scanf("%d%d", &m, &n);
@@ -27,6 +27,8 @@ int main()
         scanf("%d", &second[c][d]);
  
     for (c = 0; c < m; c++) {
+     static int sum = 0;
+     Static int multiply[10][10];
       for (d = 0; d < q; d++) {
         for (k = 0; k < p; k++) {
           sum = sum + first[c][k]*second[k][d];
